@@ -128,8 +128,8 @@ button {
 .hero {
   align-items: center;
   background:
-    linear-gradient(120deg, rgba(12, 39, 66, .96), rgba(7, 93, 168, .9)),
-    radial-gradient(circle at 90% 10%, rgba(4, 122, 122, .45), transparent 34%);
+    linear-gradient(120deg, rgba(12, 39, 66, .92), rgba(7, 93, 168, .78)),
+    url("../assets/nenwweb.jpg") center / cover no-repeat;
   color: #ffffff;
   display: grid;
   gap: clamp(26px, 5vw, 56px);
@@ -483,6 +483,44 @@ h3 {
   display: block;
   height: 210px;
   margin-top: 26px;
+}
+
+.panel-ios::after {
+  display: none;
+}
+
+.ios-shots {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.ios-shots figure {
+  align-items: center;
+  background: rgba(255, 255, 255, .68);
+  border: 1px solid rgba(12, 39, 66, .12);
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 88px minmax(0, 1fr);
+  margin: 0;
+  padding: 10px;
+}
+
+.ios-shots img {
+  background: #0f172a;
+  border-radius: 8px;
+  display: block;
+  height: 142px;
+  object-fit: contain;
+  width: 88px;
+}
+
+.ios-shots figcaption {
+  color: var(--navy);
+  font-size: .92rem;
+  font-weight: 900;
+  line-height: 1.35;
 }
 
 .panel-intro p {
