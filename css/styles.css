@@ -493,6 +493,10 @@ h3 {
   display: none;
 }
 
+.panel-desktop::after {
+  display: none;
+}
+
 .ios-shots {
   display: grid;
   gap: 12px;
@@ -527,12 +531,27 @@ h3 {
   line-height: 1.35;
 }
 
+.android-shot,
 .chrome-shot {
   background: rgba(255, 255, 255, .7);
   border: 1px solid rgba(12, 39, 66, .12);
   border-radius: 8px;
   margin: 18px 0 0;
   overflow: hidden;
+}
+
+.android-shot {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 230px;
+}
+
+.android-shot img {
+  display: block;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  width: 100%;
 }
 
 .chrome-shot img {
@@ -544,6 +563,7 @@ h3 {
   width: 100%;
 }
 
+.android-shot figcaption,
 .chrome-shot figcaption {
   color: var(--navy);
   font-size: .9rem;
