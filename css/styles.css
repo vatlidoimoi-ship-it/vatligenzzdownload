@@ -426,6 +426,18 @@ h3 {
   padding: 22px;
 }
 
+.panel-intro::after {
+  background:
+    linear-gradient(145deg, rgba(12, 39, 66, .08), rgba(7, 93, 168, .16)),
+    url("../assets/logo-phyedu.png") center / 74px 74px no-repeat;
+  border: 1px solid rgba(12, 39, 66, .12);
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 210px;
+  margin-top: 26px;
+}
+
 .panel-intro p {
   color: #344054;
   line-height: 1.62;
@@ -472,6 +484,9 @@ h3 {
   counter-increment: steps;
   display: grid;
   gap: 12px;
+  grid-template-areas:
+    "number title"
+    "number body";
   grid-template-columns: 42px minmax(0, 1fr);
   min-height: 70px;
   padding: 14px;
@@ -485,6 +500,7 @@ h3 {
   content: counter(steps);
   display: inline-flex;
   font-weight: 950;
+  grid-area: number;
   height: 42px;
   justify-content: center;
   width: 42px;
@@ -494,14 +510,16 @@ h3 {
   color: var(--ink);
   display: block;
   font-size: 1rem;
+  grid-area: title;
   line-height: 1.35;
 }
 
 .steps span {
   color: var(--muted);
   display: block;
+  grid-area: body;
   line-height: 1.55;
-  margin-top: 4px;
+  margin-top: -6px;
 }
 
 .verify-grid,
