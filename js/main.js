@@ -22,11 +22,11 @@ async function copyText(text, successMessage) {
 }
 
 copyUrlBtn?.addEventListener("click", () => {
-  copyText(appUrl, "Đã sao chép link PHYEDU.");
+  copyText(appUrl, "Đã sao chép link web chính PHYEDU.");
 });
 
 copyUrlBtnInline?.addEventListener("click", () => {
-  copyText(appUrl, "Đã sao chép link PHYEDU.");
+  copyText(appUrl, "Đã sao chép link web chính PHYEDU.");
 });
 
 copyMessageBtn?.addEventListener("click", () => {

@@ -312,6 +312,30 @@ h3 {
   min-width: 0;
 }
 
+.install-rule {
+  align-items: start;
+  background: #fff6df;
+  border: 1px solid #dfc06d;
+  border-radius: 8px;
+  color: #31250a;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+  line-height: 1.6;
+  margin-top: 16px;
+  padding: 16px 18px;
+}
+
+.install-rule strong {
+  color: #7a4d00;
+}
+
+.install-rule b {
+  color: var(--blue);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .field-label {
   color: var(--muted);
   display: block;
@@ -795,10 +819,15 @@ details p {
   }
 
   .official-link,
+  .install-rule,
   .message-box,
   .notice-card,
   .panel-intro {
     padding: 16px;
+  }
+
+  .install-rule {
+    grid-template-columns: 1fr;
   }
 
   .link-actions {
