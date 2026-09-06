@@ -3,61 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hướng dẫn cài app PHYEDU</title>
-  <meta name="description" content="Hướng dẫn cài đặt PWA PHYEDU trên iPhone, iPad, Android và máy tính.">
+  <title>Hướng dẫn cài đặt app PHYEDU</title>
+  <meta name="description" content="Hướng dẫn chi tiết cách cài PHYEDU thành ứng dụng trên iPhone, iPad, Android và máy tính.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Về đầu trang">
-      <img class="brand-mark" src="assets/logo-phyedu.png" alt="" width="42" height="42">
+      <img class="brand-mark" src="assets/logo-phyedu.png" alt="Logo PHYEDU" width="44" height="44">
       <span>
         <strong>PHYEDU</strong>
         <small>Hướng dẫn cài app</small>
       </span>
     </a>
     <nav class="topnav" aria-label="Điều hướng nhanh">
+      <a href="#quick-start">Cài nhanh</a>
       <a href="#devices">Thiết bị</a>
-      <a href="#checklist">Kiểm tra</a>
-      <a href="#troubleshooting">Lỗi thường gặp</a>
+      <a href="#verify">Kiểm tra</a>
+      <a href="#support">Lỗi thường gặp</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="intro" aria-labelledby="page-title">
-      <div class="intro-overlay">
-        <p class="eyebrow">PWA install guide</p>
-        <h1 id="page-title">Cài PHYEDU thành app trên mọi thiết bị</h1>
-        <p class="intro-copy">
-          Trang này dùng để gửi cho học sinh và giáo viên khi cần cài web PHYEDU ra màn hình chính như một ứng dụng.
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-content">
+        <p class="eyebrow">Dành cho học sinh, giáo viên và phụ huynh</p>
+        <h1 id="page-title">Cài PHYEDU thành ứng dụng học Vật Lý</h1>
+        <p class="hero-copy">
+          Làm theo hướng dẫn bên dưới để đưa PHYEDU ra màn hình chính điện thoại hoặc cài thành ứng dụng riêng trên máy tính. Sau khi cài xong, người dùng mở PHYEDU bằng biểu tượng app như các ứng dụng thông thường.
         </p>
+        <div class="hero-actions" aria-label="Thao tác nhanh">
+          <a class="primary-btn" href="https://vatligenzz.onrender.com/" target="_blank" rel="noopener">Mở PHYEDU</a>
+          <button class="ghost-btn" type="button" id="copyUrlBtn">Sao chép link</button>
+        </div>
+        <p class="copy-state" id="copyState" role="status" aria-live="polite"></p>
+      </div>
+      <div class="hero-visual" aria-label="Minh họa app PHYEDU trên thiết bị">
+        <img src="assets/install-preview.png" alt="Minh họa cài PHYEDU thành app">
       </div>
     </section>
 
-    <section class="setup-band" aria-labelledby="setup-title">
-      <div class="section-inner setup-grid">
-        <div>
-          <p class="eyebrow">Đường dẫn web</p>
-          <h2 id="setup-title">Nhập link web đang deploy</h2>
-          <p class="muted">Link này sẽ hiện trong từng hướng dẫn và có thể copy nhanh để gửi cho người dùng.</p>
+    <section class="quick-start" id="quick-start" aria-labelledby="quick-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Cài nhanh</p>
+          <h2 id="quick-title">Link chính thức để cài app</h2>
+          <p class="section-copy">
+            Gửi link này cho người dùng. Khi mở link trên đúng trình duyệt, họ có thể cài PHYEDU ra màn hình chính.
+          </p>
         </div>
-        <form class="url-tool" id="urlTool">
-          <label for="siteUrl">Link PHYEDU</label>
-          <div class="url-row">
-            <input id="siteUrl" name="siteUrl" type="url" value="https://vatligenzz.onrender.com/" autocomplete="url">
-            <button class="primary-btn" type="button" id="copyUrlBtn">Sao chép</button>
+
+        <div class="official-link">
+          <div>
+            <span class="field-label">Đường dẫn PHYEDU</span>
+            <strong class="live-url">https://vatligenzz.onrender.com/</strong>
           </div>
-          <p class="copy-state" id="copyState" role="status" aria-live="polite"></p>
-        </form>
+          <div class="link-actions">
+            <a class="secondary-btn" href="https://vatligenzz.onrender.com/" target="_blank" rel="noopener">Mở web</a>
+            <button class="secondary-btn" type="button" id="copyUrlBtnInline">Copy link</button>
+          </div>
+        </div>
+
+        <div class="notice-grid" aria-label="Lưu ý trước khi cài">
+          <article class="notice-card notice-blue">
+            <span>01</span>
+            <h3>Dùng đúng trình duyệt</h3>
+            <p>iPhone/iPad dùng Safari. Android dùng Chrome. Máy tính dùng Chrome hoặc Microsoft Edge.</p>
+          </article>
+          <article class="notice-card notice-green">
+            <span>02</span>
+            <h3>Không tải từ App Store</h3>
+            <p>PHYEDU hiện được cài theo dạng web app/PWA, không cần tìm trên App Store hoặc CH Play.</p>
+          </article>
+          <article class="notice-card notice-amber">
+            <span>03</span>
+            <h3>Icon hiện ngoài màn hình</h3>
+            <p>Cài thành công khi màn hình chính xuất hiện biểu tượng PHYEDU và bấm vào mở được app.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="devices" id="devices" aria-labelledby="devices-title">
       <div class="section-inner">
-        <div class="section-heading">
+        <div class="section-heading split">
           <div>
-            <p class="eyebrow">Chọn thiết bị</p>
-            <h2 id="devices-title">Hướng dẫn cài đặt</h2>
+            <p class="eyebrow">Hướng dẫn theo thiết bị</p>
+            <h2 id="devices-title">Chọn thiết bị đang sử dụng</h2>
           </div>
           <div class="device-tabs" role="tablist" aria-label="Chọn loại thiết bị">
             <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-device="ios">iPhone/iPad</button>
@@ -67,92 +99,111 @@
         </div>
 
         <article class="guide-panel is-active" data-panel="ios">
-          <div class="panel-copy">
-            <p class="platform-label">Safari trên iOS</p>
-            <h3>iPhone và iPad cài bằng màn hình chính</h3>
-            <p class="muted">iOS không hiện popup cài app như Android. Người dùng cần mở bằng Safari và thêm thủ công.</p>
+          <div class="panel-intro panel-ios">
+            <p class="platform-label">Safari trên iPhone/iPad</p>
+            <h3>Cài PHYEDU bằng nút Chia sẻ</h3>
+            <p>iOS không tự hiện nút cài app như Android. Người dùng cần mở bằng Safari rồi thêm thủ công vào màn hình chính.</p>
           </div>
           <ol class="steps">
-            <li>Mở Safari trên iPhone hoặc iPad.</li>
-            <li>Truy cập <strong class="live-url">https://vatligenzz.onrender.com/</strong>.</li>
-            <li>Bấm nút Chia sẻ ở thanh công cụ Safari.</li>
-            <li>Chọn Thêm vào Màn hình chính.</li>
-            <li>Bấm Thêm để tạo icon PHYEDU ngoài màn hình chính.</li>
+            <li><strong>Mở Safari.</strong><span>Không mở bằng Facebook, Zalo hoặc trình duyệt trong app khác.</span></li>
+            <li><strong>Vào link PHYEDU.</strong><span>Nhập hoặc mở link <b class="live-url">https://vatligenzz.onrender.com/</b>.</span></li>
+            <li><strong>Bấm nút Chia sẻ.</strong><span>Nút này thường nằm ở thanh dưới cùng của Safari, có biểu tượng hình vuông kèm mũi tên đi lên.</span></li>
+            <li><strong>Chọn Thêm vào Màn hình chính.</strong><span>Nếu chưa thấy mục này, kéo danh sách tùy chọn xuống phía dưới.</span></li>
+            <li><strong>Đặt tên PHYEDU và bấm Thêm.</strong><span>Sau vài giây, icon PHYEDU sẽ xuất hiện ngoài màn hình chính.</span></li>
           </ol>
         </article>
 
         <article class="guide-panel" data-panel="android">
-          <div class="panel-copy">
+          <div class="panel-intro panel-android">
             <p class="platform-label">Chrome trên Android</p>
-            <h3>Android có thể cài trực tiếp từ trình duyệt</h3>
-            <p class="muted">Nếu PWA đủ điều kiện, Chrome sẽ hiện nút Cài app trên trang hoặc trong menu.</p>
+            <h3>Cài PHYEDU bằng nút Cài đặt</h3>
+            <p>Android thường cho cài trực tiếp từ Chrome. Nếu nút cài chưa hiện, có thể dùng menu ba chấm của trình duyệt.</p>
           </div>
           <ol class="steps">
-            <li>Mở Chrome trên điện thoại Android.</li>
-            <li>Truy cập <strong class="live-url">https://vatligenzz.onrender.com/</strong>.</li>
-            <li>Bấm nút Cài app trên trang nếu có hiện.</li>
-            <li>Nếu không thấy, bấm menu ba chấm và chọn Thêm vào màn hình chính hoặc Cài đặt ứng dụng.</li>
-            <li>Xác nhận Cài đặt, sau đó mở PHYEDU từ icon vừa tạo.</li>
+            <li><strong>Mở Chrome.</strong><span>Nên dùng Chrome bản mới nhất để hiện đầy đủ tính năng cài app.</span></li>
+            <li><strong>Vào link PHYEDU.</strong><span>Mở <b class="live-url">https://vatligenzz.onrender.com/</b> và chờ trang tải xong.</span></li>
+            <li><strong>Bấm Cài app nếu có thông báo.</strong><span>Nút này có thể hiện ở cuối màn hình hoặc trong hộp thoại của Chrome.</span></li>
+            <li><strong>Nếu không thấy, mở menu ba chấm.</strong><span>Chọn Cài đặt ứng dụng hoặc Thêm vào màn hình chính.</span></li>
+            <li><strong>Xác nhận cài đặt.</strong><span>Sau khi cài, mở PHYEDU bằng icon mới ngoài màn hình điện thoại.</span></li>
           </ol>
         </article>
 
         <article class="guide-panel" data-panel="desktop">
-          <div class="panel-copy">
-            <p class="platform-label">Chrome hoặc Edge trên máy tính</p>
-            <h3>Máy tính cài như một ứng dụng riêng</h3>
-            <p class="muted">Sau khi cài, PHYEDU có thể mở trong cửa sổ riêng, gắn vào taskbar hoặc desktop.</p>
+          <div class="panel-intro panel-desktop">
+            <p class="platform-label">Chrome/Edge trên máy tính</p>
+            <h3>Cài PHYEDU thành cửa sổ ứng dụng riêng</h3>
+            <p>Trên máy tính, PHYEDU có thể mở trong cửa sổ riêng và ghim vào taskbar để học nhanh hơn.</p>
           </div>
           <ol class="steps">
-            <li>Mở Chrome hoặc Microsoft Edge.</li>
-            <li>Truy cập <strong class="live-url">https://vatligenzz.onrender.com/</strong>.</li>
-            <li>Bấm biểu tượng cài đặt trên thanh địa chỉ nếu có.</li>
-            <li>Nếu không thấy, mở menu trình duyệt và chọn Cài đặt PHYEDU hoặc Apps.</li>
-            <li>Xác nhận cài đặt và mở app từ Start Menu, Desktop hoặc Taskbar.</li>
+            <li><strong>Mở Chrome hoặc Microsoft Edge.</strong><span>Không nên dùng trình duyệt quá cũ vì có thể không hỗ trợ PWA.</span></li>
+            <li><strong>Truy cập PHYEDU.</strong><span>Mở link <b class="live-url">https://vatligenzz.onrender.com/</b>.</span></li>
+            <li><strong>Tìm biểu tượng cài đặt.</strong><span>Biểu tượng thường nằm bên phải thanh địa chỉ, gần nút đánh dấu trang.</span></li>
+            <li><strong>Bấm Cài đặt PHYEDU.</strong><span>Nếu không thấy biểu tượng, mở menu ba chấm rồi tìm mục Apps hoặc Install.</span></li>
+            <li><strong>Ghim app nếu cần.</strong><span>Sau khi cài, có thể ghim PHYEDU vào Taskbar, Desktop hoặc Start Menu.</span></li>
           </ol>
         </article>
       </div>
     </section>
 
-    <section class="checklist-band" id="checklist" aria-labelledby="checklist-title">
-      <div class="section-inner">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Trước khi gửi link</p>
-            <h2 id="checklist-title">Checklist PWA</h2>
-          </div>
-          <p class="muted narrow">Dùng phần này để kiểm tra web đã sẵn sàng cho người dùng cài thành app hay chưa.</p>
+    <section class="verify" id="verify" aria-labelledby="verify-title">
+      <div class="section-inner verify-grid">
+        <div>
+          <p class="eyebrow">Sau khi cài</p>
+          <h2 id="verify-title">Cách kiểm tra đã cài đúng</h2>
+          <p class="section-copy">
+            Sau khi làm xong các bước, hãy kiểm tra nhanh để chắc chắn người dùng đã cài đúng app PHYEDU chứ không chỉ lưu tạm một đường link.
+          </p>
         </div>
-        <div class="check-grid">
-          <label class="check-item"><input type="checkbox"> Web đang chạy bằng HTTPS khi đưa lên hosting</label>
-          <label class="check-item"><input type="checkbox"> Manifest PWA truy cập được</label>
-          <label class="check-item"><input type="checkbox"> Service worker đăng ký thành công</label>
-          <label class="check-item"><input type="checkbox"> Icon app hiện đúng trên điện thoại</label>
-          <label class="check-item"><input type="checkbox"> Trang offline hiện khi mất mạng</label>
-          <label class="check-item"><input type="checkbox"> Đã test Safari iOS, Chrome Android và Chrome/Edge máy tính</label>
+        <div class="check-list">
+          <label><input type="checkbox"> Màn hình chính có icon PHYEDU đúng logo.</label>
+          <label><input type="checkbox"> Bấm icon mở ra trang đăng nhập PHYEDU.</label>
+          <label><input type="checkbox"> Thanh địa chỉ trình duyệt không còn chiếm nhiều diện tích như khi mở web thường.</label>
+          <label><input type="checkbox"> Đăng nhập được bằng tài khoản học sinh hoặc giáo viên.</label>
+          <label><input type="checkbox"> Tắt app rồi mở lại vẫn vào đúng PHYEDU.</label>
         </div>
       </div>
     </section>
 
-    <section class="troubleshooting" id="troubleshooting" aria-labelledby="troubleshooting-title">
+    <section class="share-message" aria-labelledby="share-title">
+      <div class="section-inner share-grid">
+        <div>
+          <p class="eyebrow">Mẫu gửi cho người dùng</p>
+          <h2 id="share-title">Tin nhắn hướng dẫn nhanh</h2>
+          <p class="section-copy">Có thể sao chép đoạn này gửi cho học sinh, giáo viên hoặc phụ huynh.</p>
+        </div>
+        <div class="message-box">
+          <p id="messageText">Em/thầy cô mở link PHYEDU: https://vatligenzz.onrender.com/ rồi cài ra màn hình chính. iPhone/iPad mở bằng Safari, bấm Chia sẻ rồi chọn Thêm vào Màn hình chính. Android mở bằng Chrome, bấm Cài app hoặc menu ba chấm rồi chọn Thêm vào màn hình chính.</p>
+          <button class="secondary-btn" type="button" id="copyMessageBtn">Copy tin nhắn</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support" aria-labelledby="support-title">
       <div class="section-inner">
-        <p class="eyebrow">Hỗ trợ nhanh</p>
-        <h2 id="troubleshooting-title">Nếu không thấy nút cài app</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Xử lý lỗi thường gặp</p>
+          <h2 id="support-title">Nếu không cài được app</h2>
+        </div>
         <div class="problem-list">
           <details open>
-            <summary>Đang mở web bằng iPhone nhưng không thấy nút Cài app</summary>
-            <p>Hãy mở bằng Safari, bấm Chia sẻ, rồi chọn Thêm vào Màn hình chính. iOS thường không hiện popup cài đặt riêng.</p>
+            <summary>iPhone không thấy mục “Thêm vào Màn hình chính”</summary>
+            <p>Hãy kiểm tra lại người dùng đang mở bằng Safari. Nếu mở từ Zalo, Messenger, Facebook hoặc Google app, hãy sao chép link rồi dán vào Safari.</p>
           </details>
           <details>
-            <summary>Android không hiện thông báo cài đặt</summary>
-            <p>Thử tải lại trang, mở menu ba chấm của Chrome, hoặc kiểm tra web đã chạy HTTPS và service worker không lỗi.</p>
+            <summary>Android không hiện nút “Cài app”</summary>
+            <p>Mở bằng Chrome, tải lại trang, chờ trang tải xong rồi bấm menu ba chấm. Nếu vẫn không có, chọn “Thêm vào màn hình chính”.</p>
           </details>
           <details>
-            <summary>Máy tính không có icon cài app trên thanh địa chỉ</summary>
-            <p>Mở bằng Chrome hoặc Edge mới nhất. Nếu vẫn không có, vào menu trình duyệt và tìm mục Apps hoặc Install this site.</p>
+            <summary>Cài xong nhưng icon không phải PHYEDU</summary>
+            <p>Xóa icon vừa tạo, mở lại link chính thức và cài lại. Nếu web vừa được cập nhật, chờ vài phút để trình duyệt lấy lại icon mới.</p>
           </details>
           <details>
-            <summary>App cài xong nhưng nội dung cũ vẫn hiện</summary>
-            <p>Đóng app, mở lại web trên trình duyệt, tải lại trang. Nếu cần, xóa app đã cài và cài lại sau khi deploy bản mới.</p>
+            <summary>Mở app bị trắng trang hoặc không tải được</summary>
+            <p>Kiểm tra kết nối mạng, đóng app rồi mở lại. Nếu vẫn lỗi, mở PHYEDU bằng trình duyệt để kiểm tra web chính có đang hoạt động không.</p>
+          </details>
+          <details>
+            <summary>Máy tính không thấy nút cài app</summary>
+            <p>Dùng Chrome hoặc Edge phiên bản mới. Vào menu ba chấm, chọn Apps, sau đó chọn Install this site hoặc Cài đặt trang web này.</p>
           </details>
         </div>
       </div>
@@ -160,7 +211,11 @@
   </main>
 
   <footer class="footer">
-    <p>PHYEDU - Hướng dẫn cài app PWA cho học sinh và giáo viên.</p>
+    <div>
+      <strong>PHYEDU</strong>
+      <p>Trang hướng dẫn cài đặt web app/PWA cho hệ thống học Vật Lý.</p>
+    </div>
+    <a href="https://vatligenzz.onrender.com/" target="_blank" rel="noopener">Mở PHYEDU</a>
   </footer>
 
   <script src="js/main.js"></script>

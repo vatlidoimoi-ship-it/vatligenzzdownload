@@ -1,44 +1,48 @@
-const urlInput = document.getElementById("siteUrl");
-const copyBtn = document.getElementById("copyUrlBtn");
+const appUrl = "https://vatligenzz.onrender.com/";
+
 const copyState = document.getElementById("copyState");
-const liveUrls = document.querySelectorAll(".live-url");
+const copyUrlBtn = document.getElementById("copyUrlBtn");
+const copyUrlBtnInline = document.getElementById("copyUrlBtnInline");
+const copyMessageBtn = document.getElementById("copyMessageBtn");
+const messageText = document.getElementById("messageText");
 const tabButtons = document.querySelectorAll(".tab-btn");
 const panels = document.querySelectorAll(".guide-panel");
 
-function normalizedUrl() {
-  const value = urlInput.value.trim();
-  return value || "https://vatligenzz.onrender.com/";
-}
-
-function syncUrls() {
-  const value = normalizedUrl();
-  liveUrls.forEach((node) => {
-    node.textContent = value;
-  });
-}
-
-urlInput.addEventListener("input", syncUrls);
-syncUrls();
-
-copyBtn.addEventListener("click", async () => {
-  const value = normalizedUrl();
+async function copyText(text, successMessage) {
   try {
-    await navigator.clipboard.writeText(value);
-    copyState.textContent = "Đã sao chép link.";
+    await navigator.clipboard.writeText(text);
+    if (copyState) {
+      copyState.textContent = successMessage;
+    }
   } catch (error) {
-    urlInput.select();
-    copyState.textContent = "Hãy nhấn Ctrl + C để sao chép link.";
+    if (copyState) {
+      copyState.textContent = "Không tự copy được. Hãy bôi đen link rồi nhấn Ctrl + C.";
+    }
   }
+}
+
+copyUrlBtn?.addEventListener("click", () => {
+  copyText(appUrl, "Đã sao chép link PHYEDU.");
+});
+
+copyUrlBtnInline?.addEventListener("click", () => {
+  copyText(appUrl, "Đã sao chép link PHYEDU.");
+});
+
+copyMessageBtn?.addEventListener("click", () => {
+  copyText(messageText.textContent.trim(), "Đã sao chép tin nhắn hướng dẫn.");
 });
 
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const device = button.dataset.device;
+
     tabButtons.forEach((item) => {
       const active = item === button;
       item.classList.toggle("is-active", active);
       item.setAttribute("aria-selected", active ? "true" : "false");
     });
+
     panels.forEach((panel) => {
       panel.classList.toggle("is-active", panel.dataset.panel === device);
     });
