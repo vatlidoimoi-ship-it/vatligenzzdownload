@@ -489,6 +489,10 @@ h3 {
   display: none;
 }
 
+.panel-android::after {
+  display: none;
+}
+
 .ios-shots {
   display: grid;
   gap: 12px;
@@ -521,6 +525,31 @@ h3 {
   font-size: .92rem;
   font-weight: 900;
   line-height: 1.35;
+}
+
+.chrome-shot {
+  background: rgba(255, 255, 255, .7);
+  border: 1px solid rgba(12, 39, 66, .12);
+  border-radius: 8px;
+  margin: 18px 0 0;
+  overflow: hidden;
+}
+
+.chrome-shot img {
+  display: block;
+  height: auto;
+  max-height: 230px;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+}
+
+.chrome-shot figcaption {
+  color: var(--navy);
+  font-size: .9rem;
+  font-weight: 850;
+  line-height: 1.45;
+  padding: 10px 12px 12px;
 }
 
 .panel-intro p {
